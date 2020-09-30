@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS</title>
+<title>Change Color</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<style>
+.mySlides {display:none;}
+</style>
+<body>
+
+<h2 class="w3-center">IMAGE CAROUSEL</h2>
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="img_snowtops.jpg" style="width:100%">
+  <img class="mySlides" src="img_lights.jpg" style="width:100%">
+  <img class="mySlides" src="img_mountains.jpg" style="width:100%">
+  <img class="mySlides" src="img_forest.jpg" style="width:100%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+  
+  
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Color</title>
+</head>
+<body><center>
+<button id="changeGreen">Change Font Color blue</button>
+<button id="changeRed">Change Font Color yellow</button>
+<p>
+<span id="output">hello,how are you? the above slideshow is the example for image carousel</span>
+</p></center>
+<script>
+
+document.getElementById("changeGreen").onclick = function(){
+	document.getElementById("output").style.color = 'blue';
+}
+
+document.getElementById("changeRed").onclick = function(){
+	document.getElementById("output").style.color = 'yellow';
+}
+</script>
+</body>
+</html>
+
+
+<!DOCTYPE HTML>  
+<html>  
+    <head>  
+        <title>  
+             changing the background color 
+           
+        </title> 
+    </head>  
+      
+    <body style = "text-align:center;"> 
+           
+        <h1 style = "color:green;" >  
+            themes:background  will change
+        </h1>  
+          
+        <p id = "GFG_UP" style = 
+            "font-size: 16px; font-weight: bold;">      
+        </p> 
+          
+        <button onclick = "gfg_Run()">  
+            Click here 
+        </button> 
+          
+        <p id = "GFG_DOWN" style = 
+            "color:green; font-size: 20px; font-weight: bold;"> 
+        </p> 
+          
+        <script> 
+            var el_up = document.getElementById("GFG_UP"); 
+            var el_down = document.getElementById("GFG_DOWN"); 
+            var str = "Click on button to change the background color"; 
+          
+            el_up.innerHTML = str; 
+          
+            function changeColor(color) { 
+                document.body.style.background = color; 
+            } 
+              
+            function gfg_Run() { 
+                changeColor('yellow'); 
+                el_down.innerHTML = "Background Color changed"; 
+            }          
+        </script>  
+    </body>  
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>CONTACT FORM</title>
+<script type="text/javascript">
+function valid() 
+{
+var na = document.getElementById("nm").value;
+var ag = document.getElementById("age").value;
+var em = document.getElementById("eid").value.indexOf("@");
+var mno = document.getElementById("pno").value;
+if(na==""||na==null)
+{
+alert("Enter The Name");
+return false;
+}
+else if(isNaN(ag)||ag<1||ag>100)
+{
+alert("The age must be a number between 1 and 100");
+return false;
+}
+else if(em==-1) 
+{  
+alert("E-mail ID is not valid");
+return false;
+}
+else if(mno==""||mno==null)
+{
+alert("Enter The Phone No");
+return false;
+}
+else if(isNaN(mno)||mno.length>10||mno.length<10)
+{
+alert("The mobile no. always has 10 digit numerical value");
+return false;
+}
+else
+alert("The Information given is Submitted Successfully");
+}
+</script>
+</head>
+<body>
+<center><b>
+<h3>CONTACT FORM</h3>
+<form action="" onsubmit="return valid()" method="post">
+Name: <input type="text" id="nm"><br><br>
+Age: <input type="text" id="age"><br><br>
+Email id: <input type="text" id="eid"><br><br>
+Phone Number: <input type="text" id="pno"><br><br>
+<input type="submit" value="Submit">
+</form>
+</b></center>
+</body>
+</html>
+
+
+
+
